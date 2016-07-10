@@ -128,16 +128,36 @@
                     We'll be using <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank">Firefox Development Edition</a>. Other browsers are Microsoft Edge, Internet Explorer, Google Chrome, Apple Safari and Opera.
                 </p>
             </li>
-            <li>A text editor is what we use to develop in. There are literally dozens of different editors you could choose from ranging from fully featured to basic text. We'll be using Github's <a href="https://atom.io/">Atom</a> IDE. Other editors include - Sublime Text, Espresso, Coda, Cloud9, Visual Studio, Adobe Dreamweaver, Notepad++, etc...</li>
-            <li>To view the document object model (DOM), we'll use the element inspector built right into the browser</li>
-            <li><a href="hhttps://github.com/Geekwise-Bootcamp-1/bc1-docdeck#welcome-to-bootcamp-1" target="_blank">Let's get started!</a></li>
-            <li>Online Resources
-                <ul>
-                    <li><a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
-                    <li><a href="https://jsfiddle.net/vsgtjgdo/1/" target="_blank">jsFiddle</a></li>
-                    <li><a href="http://www.w3schools.com/js/default.asp" target="_blank">W3schools.com</a></li>
-                </ul>
+            <li>
+                <strong>Text Editor</strong>
+                <p>
+                    A text editor is what we use to develop in. There are literally dozens of different editors you could choose from ranging from fully featured to basic text. We'll be using Github's <a href="https://atom.io/">Atom</a> IDE. Other editors include - Sublime Text, Espresso, Coda, Cloud9, Visual Studio, Adobe Dreamweaver, Notepad++, etc...
+                </p>
             </li>
+            <li>
+                <strong>Element Inspector</strong>
+                <p>
+                    To view the document object model (DOM), we'll use the element inspector built right into the browser
+                </p>
+            </li>
+            <li>
+                <hr>
+                <a href="hhttps://github.com/Geekwise-Bootcamp-1/bc1-docdeck#welcome-to-bootcamp-1" target="_blank">Let's get started!</a>
+            </li>
+        </ul>
+    </article>
+</section>
+<section data-title="Other Resources">
+    <article>
+        <h1>Other Resources</h1>
+        <p>
+            Here is a short list of additional resources to benefit your learning.
+        </p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network</a></li>
+            <li><a href="http://www.w3schools.com/js/default.asp" target="_blank">W3schools.com</a></li>
+            <li><a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+            <li><a href="http://codepen.io/" target="_blank">CodePen</a></li>
         </ul>
     </article>
 </section>
