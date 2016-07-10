@@ -7,31 +7,31 @@
     * Already have an account? Perfect!
     * Join the Geekwise-Bootcamp-1 Organization
         * From within the organization:
-        * Click the ![alt text](./img/new-repository-btn.png "New Repository") button
+        * Click the ![Alt text](./img/new-repository-btn.png "New Repository") button
         * In the Repository Name input box, type your Github username (lowercase please)
-        * Check the ![alt text](./img/readme-checkbox.png "Initialize this repository with a README") checkbox
-        * Click the ![alt text](./img/create-repository-btn.png "Create Repository") button
+        * Check the ![Alt text](./img/readme-checkbox.png "Initialize this repository with a README") checkbox
+        * Click the ![Alt text](./img/create-repository-btn.png "Create Repository") button
 
 
 ### Items to download
 * [Git](http://git-scm.com/)
     * __Mac__ - download and install  
-    ![alt text](./img/git-mac.png "Download for Mac")
+    ![Alt text](./img/git-mac.png "Download for Mac")
     * __Windows__ - download and install  
-    ![alt text](./img/git-windows.png "Download for Windows")
+    ![Alt text](./img/git-windows.png "Download for Windows")
 * [Node.js](http://nodejs.org/en/download/)
     * __Mac__ - download and install  
-    ![alt text](./img/node-mac.png "Download for Mac")
+    ![Alt text](./img/node-mac.png "Download for Mac")
     * __Windows__ - download and install  
-    ![alt text](./img/node-windows.png "Download for Windows")
+    ![Alt text](./img/node-windows.png "Download for Windows")
         * [Install Visual C++ Build Tools](http://go.microsoft.com/fwlink/?LinkId=691126)
         * [Install Python 2.7 (v3.x.x is NOT supported)](https://www.python.org/downloads/)
         * Launch Bash and run ``` npm config set msvs_version 2015 ```
 * [Github Desktop](http://desktop.github.com)
     * __Mac__ - download and install  
-    ![alt text](./img/github-mac.png "Download for Mac")
+    ![Alt text](./img/github-mac.png "Download for Mac")
     * __Windows__ - download and install  
-    ![alt text](./img/github-windows.png "Download for Windows")
+    ![Alt text](./img/github-windows.png "Download for Windows")
 * [Atom](http://atom.io/)
     * Emmet (emmet)
     * Atom Beautify (atom-beautify)
