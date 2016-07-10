@@ -130,7 +130,7 @@
             </li>
             <li>A text editor is what we use to develop in. There are literally dozens of different editors you could choose from ranging from fully featured to basic text. We'll be using Github's <a href="https://atom.io/">Atom</a> IDE. Other editors include - Sublime Text, Espresso, Coda, Cloud9, Visual Studio, Adobe Dreamweaver, Notepad++, etc...</li>
             <li>To view the document object model (DOM), we'll use the element inspector built right into the browser</li>
-            <li><a href="https://github.com/Geekwise-Javascript-1/Geekwise-Javascript-1.github.io#welcome-to-javascript-1" target="_blank">Let's get started!</a></li>
+            <li><a href="hhttps://github.com/Geekwise-Bootcamp-1/bc1-docdeck#welcome-to-bootcamp-1" target="_blank">Let's get started!</a></li>
             <li>Online Resources
                 <ul>
                     <li><a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
