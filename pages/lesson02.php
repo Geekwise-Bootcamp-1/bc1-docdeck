@@ -5,6 +5,14 @@
 <section data-title="Review">
     <article>
         <h1>Review</h1>
+        <ol>
+            <li>Name Three of the four elements that create a network</li>
+            <li>What is a static web page?</li>
+            <li>What is a dynamic web page?</li>
+        </ol>
+    </article>
+</section>
+<!--
         <ul>
             <li>Comments and variables</li>
             <li>Data Types
@@ -34,6 +42,21 @@
         </ul>
     </article>
 </section>
+-->
+<section data-title="What is HTML?">
+    <article>
+        <h1>What is HTML?</h1>
+        <p>
+            HTML (Hypertext Markup Language) is used to define the structure and content of a web page.
+        </p>
+        <p data-height="550" data-theme-id="23663" data-slug-hash="bZoxRR" data-default-tab="html,result" data-user="mhigley" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/mhigley/pen/bZoxRR/">BC1 Introduction to HTML</a> by Matthew Higley (<a href="http://codepen.io/mhigley">@mhigley</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+    </article>
+</section>
+
+
+
+
 <section data-title="Using JavaScript in a web page">
     <article>
         <h1>Using Javascript in a Web Page</h1>
