@@ -43,98 +43,191 @@
     </article>
 </section>
 -->
-<section data-title="What is HTML?">
+<section data-title="What is Github Anyways?">
     <article>
-        <h1>What is HTML?</h1>
+        <h1>What is Github Anyways?</h1>
         <p>
-            HTML (Hypertext Markup Language) is used to define the structure and content of a web page.
+            GitHub is a Git repository hosting service, but it adds many of its own features. While Git is a command line tool, GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features, such as a wikis and basic task management tools for every project.
+            <br /><br />
+            In english:
         </p>
-        <p data-height="550" data-theme-id="23663" data-slug-hash="bZoxRR" data-default-tab="html,result" data-user="mhigley" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/mhigley/pen/bZoxRR/">BC1 Introduction to HTML</a> by Matthew Higley (<a href="http://codepen.io/mhigley">@mhigley</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    </article>
-</section>
-
-
-
-
-<section data-title="Using JavaScript in a web page">
-    <article>
-        <h1>Using Javascript in a Web Page</h1>
         <ul>
-            <li>3 options:
+            <li>
+                <h4>Git</h4>
                 <ul>
-                    <li>Inline JavaScript</li>
-                    <li>Inline Script Tag</li>
-                    <li>Script Tag with Src (this imports a separate JS file into your page)</li>
+                    <li>Git is a version control system. It manages and stores revisions of projects.</li>
+                    <li>Git is primarily used for code, but can be used to manage any other type of file.</li>
+                    <li>Think of Git as a filing system for every draft of a document.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Github</h4>
+                <ul>
+                    <li>Github is a graphical user interface (GUI) for your version control.</li>
+                    <li>Each project is stored in repositories accessible to the world as open source.</li>
+                    <li>Entire teams can contribute to a single project and every change or contribution is tracked and timestamped.</li>
+                    <li>Millions of repositories can be watched, starred, and forked by any other developer.</li>
+                    <li>Want to contribute to a project?
+                        <ol>
+                            <li>Find a project</li>
+                            <li>Fork the repository</li>
+                            <li>Clone a copy to your own computer</li>
+                            <li>Make changes or add functionality that benefits the project</li>
+                            <li>Submit a pull request so the original author can see your changes</li>
+                            <li>The original author can then merge your changes</li>
+                            <li>Feel great about how you contributed to improving the project</li>
+                        </ol>
+                    </li>
                 </ul>
             </li>
         </ul>
-        <h4>Inline Javascript</h4>
-        <ul>
-            <li>Create a blank html file with an h1 tag using the onclick attribute like the example below</li>
-            <li>
-                <p data-height="250" data-theme-id="23663" data-slug-hash="VjproW" data-default-tab="html,result" data-user="mhigley" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/mhigley/pen/VjproW/">JS Inline</a> by Matthew Higley (<a href="http://codepen.io/mhigley">@mhigley</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-                <script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
-            </li>
-            <li>The onclick attribute can be used to attach some functionality to a DOM node. NOTE: This is not the recommended way of attaching functionality to your DOM elements, for now at least...</li>
-            <li>This is considered inline since the code that JavaScript will execute is inside the node itself. It lives in the page, thus it is considered inline.</li>
-        </ul>
+    </article>
+</section>
 
-        <h4>Inline Script Tag</h4>
-        <ul>
-            <li>The next way is another type of inline JavaScript, in that it's JavaScript that is executed in the context of the html page. IE the code itself still lives inside the html page, but in its own script tag.</li>
-            <li>Remove the onclick attribute from your h1 tag and alter your page markup to match the example below</li>
-            <li>
-                <p data-height="300" data-theme-id="23663" data-slug-hash="yJMpBd" data-default-tab="html,result" data-user="mhigley" data-embed-version="2" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/mhigley/pen/yJMpBd/">JS Inline Script</a> by Matthew Higley (<a href="http://codepen.io/mhigley">@mhigley</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-                <script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+<section data-title="So How Do We Use Git?">
+    <article>
+        <h1>So How Do We Use Git?</h1>
+        <p>
+            When we set up our systems, we created accounts with Github and created our own repository on their servers. It's time to clone a copy of that repository onto our computer so as we develop our projects on our computers, we can push all of our changes online to always maintain a backup of all our work. Let's walk through the steps together.
+        </p>
+        <ol>
+            <li>Open your Bash Terminal by pressing the Windows button</li>
+            <li>Type BASH, highlight the Bash Terminal app and press Enter.
+                <figure>
+                    <img src="/img/bash-terminal.png" alt="Bash Terminal" />
+                    <figcaption>Source: <a href="http://www.softantenna.com/wp/windows/bash-on-ubuntu-on-windows-10/">softantenna.com</a></figcaption>
+                </figure>
+                <p>
+                    The green should be your user and computer name and the yellow is the current path. After the dollar sign ($) is where you type your terminal commands.
+                </p>
             </li>
-        </ul>
-
-        <h4>Script Tag With Src</h4>
-        <ul>
-            <li>One of the last ways of including scripts in your page is similar to the previous way, except instead of putting your JavaScript inline you specify an external JavaScript file that the browser will include in your page and execute.</li>
-            <li>Create a new JavaScript file in the same folder as your html file you've been using for the above examples. Include that file into your html file using the method below.</li>
-            <li>
-                <p data-height="250" data-theme-id="23663" data-slug-hash="NrpXWe" data-default-tab="html,result" data-user="mhigley" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/mhigley/pen/NrpXWe/">JS Script Tag with Src</a> by Matthew Higley (<a href="http://codepen.io/mhigley">@mhigley</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-                <script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
-            </li>
-            <li>Insert the following line into your new JS file</li>
-            <li>
+            <li>Type the following command:
                 <code><pre>
-alert("I'm external");</pre></code>
+cd ~/Desktop</pre></code>
+                Press Enter. The new path should reflect that your current active directory is the Desktop.
             </li>
-            <li>So when the browser encounters a script tag with a src attribute it will include the file and execute it.</li>
-            <li>Note: This is usually the best way of including JavaScript on your page. There are always exceptions but generally speaking, when you start writing your own JavaScript, you'll add your scripts this way.</li>
-        </ul>
-
-        <h4>Execution of a JS file</h4>
-        <ul>
-            <li>JavaScript always executes from top to bottom. So if you include two JavaScript files...</li>
+            <li>Now type:
+                <code><pre>
+ls -la</pre></code>
+                The Terminal will list out any and all folders and files you have stored on the Desktop of your computer.
+            </li>
+            <li>Head back to our Github Bootcamp 1 Organization page and click on your repository.</li>
+            <li>In the main utility bar, click the green "Clone or download" button. Check that the title of the popup says: "Clone with HTTPS" and click on the copy to clipboard icon.</li>
+            <li>Back in the Terminal, type:
+                <code><pre>
+git clone [ins key]</pre></code>
+            Press Enter. When you press the insert key, a URL will appear that is an absolute path to <strong>your personal</strong> repository.
+            e.g.: <code><pre>
+git clone https://github.com/Geekwise-Bootcamp-1/rbtstudio.git</pre></code>
+                <blockquote>
+                    Your URL is going to be different than what is demoed here in the documentation.<br>
+                    Do <strong>NOT</strong> type:
+                    <code><pre>
+git clone [ins key]</pre></code>
+                    Do <strong>NOT</strong> type:
+                    <code><pre>
+git clone https://github.com/Geekwise-Bootcamp-1/rbtstudio.git</pre></code>
+                </blockquote>
+            </li>
+            <li>Let's now change directory to be within the new repository cloned to your desktop. Type:
+                <code><pre>
+cd [your repository]</pre></code>
+                Press Enter.
+                <blockquote>
+                    Again... what you type is going to be different than what is demoed here in the documentation.<br>
+                    Do <strong>NOT</strong> type:
+                    <code><pre>
+cd [your repository]</pre></code>
+                </blockquote>
+            </li>
             <li>
-                <p data-height="125" data-theme-id="23663" data-slug-hash="ZOexYM" data-default-tab="html" data-user="mhigley" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/mhigley/pen/ZOexYM/">JS Execution of a JS file</a> by Matthew Higley (<a href="http://codepen.io/mhigley">@mhigley</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-                <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                Your current path should read something similar to:
+                <code><pre>
+$ ~/Desktop/[your repository]</pre></code>
             </li>
-            <li>The browser will first download foo.js, execute it line by line, then download bar.js and execute that, etc...</li>
-            <li>Often, you may want to use something defined in foo.js inside bar.js. In order to do this, you must load foo.js first, so it is executed, then load bar.js.</li>
+        </ol>
+    </article>
+</section>
+
+
+
+<section data-title="General Terminal Commands">
+    <article>
+        <h1>General Terminal Commands</h1>
+        <p>
+            The following list of commands that have a wide use case. Aquaint yourself as much as possible to become a more valuable developer.
+        </p>
+        <ul>
+            <li>
+                <h4>cd</h4>
+                Change directory
+                <code><pre>
+cd</pre></code>
+            </li>
+            <li>
+                <h4>ls</h4>
+                List information about file(s). Short listing.
+                <code><pre>
+ls</pre></code>
+                <blockquote>
+                    Options to append:
+                    <code><pre>
+ls -l</pre></code>
+                    Long listing.
+                    <code><pre>
+ls -a</pre></code>
+                    Listing including hidden files.
+                    <code><pre>
+ls -la</pre></code>
+                    Long listing and including hidden files.
+                </blockquote>
+            </li>
+            <li>
+                <h4>mkdir</h4>
+                Create a new directory
+                <code><pre>
+mkdir [directory name]</pre></code>
+            </li>
+            <li>
+                <h4>touch</h4>
+                Create a new file
+                <code><pre>
+touch [file name]</pre></code>
+            </li>
         </ul>
     </article>
 </section>
-<section data-title="User Interaction">
+<section data-title="Git Specific Commands">
     <article>
-        <h1>User Interaction</h1>
+        <h1>Git specific commands</h1>
+        <p>
+            The following commands are specific to making changes and communicating with Github and your remote repository.
+        </p>
         <ul>
-            <li>Alert, Confirm, and Prompt functions</li>
-            <li>First, what is a function?
-                <ul>
-                    <li>We will get much deeper into functions in the following class sessions, but for now, understand a function is nothing more than some grouped JavaScript behavior that performs a specific set of actions. You call a function.
-                        It returns a value.</li>
-                </ul>
+            <li>
+                <h4>git status</h4>
+                <code><pre>
+git status</pre></code>
+                Displays all files that have been modified. Red are untracked files, green are tracked files.
             </li>
-            <li>alert() and confirm() and prompt() can each be used to convey or solicit information from a user</li>
-            <li>alert() presents a message to the user</li>
-            <li>confirm() will return a true or false Boolean depending on the button the user clicked</li>
-            <li>prompt() will allow you to ask the user for input, and then use it in your script</li>
-            <li>All three functions halt the execution of JavaScript until some action by the user takes place</li>
+            <li>
+                <h4>git add</h4>
+                <code><pre>
+git add .</pre></code>
+                Add all current changes to the next commit.
+            </li>
+            <li>
+                <h4>git commit</h4>
+                <code><pre>
+git commit -m "[your commit message]"</pre></code>
+                <strong>Stages all of the files into a "waiting room" preped for deployment to the repository. However every</strong> commit needs a message! Be descriptive. The more detailed your message, the easier it will be to find a version you can revert back to when you accidentally delete everything. <i class="fa fa-frown-o"></i>
+            </li>
+            <li>
+                <h4>git push</h4>
+                <code><pre>
+git push</pre></code>
+                Push all committed changes to your repository.
+            </li>
         </ul>
     </article>
 </section>
@@ -142,17 +235,19 @@ alert("I'm external");</pre></code>
     <article>
         <h1>Assignment</h1>
         <ol>
-            <li>Create a new script called app.js and program it to do the following:
-                <ul>
-                    <li>Ask for your first name</li>
-                    <li>Ask for your last name</li>
-                    <li>Log your first name to the console</li>
-                    <li>Alert your last name</li>
-                    <li>Confirm (anything) and alert the result of the confirm</li>
-                </ul>
-                <li>Include your app.js file in a blank empty html page</li>
-                <li>Execute your script</li>
-                <li>Make sure that your script functions the way it's expected too</li>
+            <li>Practice navigating the folder structure of your computer.</li>
+            <li>Are there specific navigational options that would make moving back-and-forth between folders easier?</li>
+            <li>Create new folders and files.</li>
+            <li>Can you add multiple folders or files in a single command line?</li>
+            <li>Are we able to move files or folders?</li>
+            <li>What about duplicating a file?</li>
+            <li>How can we remove files and folders?
+                <blockquote>
+                    <h2 style="color: red;">WARNING!</h2>
+                    <p>
+                        Improperly using the remove command can have devistating consequences if you're careless. Utilizing the command line does <strong>NOT</strong> ask "Are you sure?" before running the command. You can unintentionally delete important files required by the system to function properly. If you have any hesitation, wait until it can be demoed and discussed in class. Do <strong>NOT</strong> blindly experiment with commands you're uncertain of.
+                    </p>
+                </blockquote>
             </li>
         </ol>
     </article>

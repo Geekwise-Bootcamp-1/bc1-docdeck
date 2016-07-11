@@ -142,7 +142,7 @@
             </li>
             <li>
                 <hr>
-                <a href="hhttps://github.com/Geekwise-Bootcamp-1/bc1-docdeck#welcome-to-bootcamp-1" target="_blank">Let's get started!</a>
+                <a href="https://github.com/Geekwise-Bootcamp-1/bc1-docdeck#welcome-to-bootcamp-1" target="_blank">Let's get started!</a>
             </li>
         </ul>
     </article>

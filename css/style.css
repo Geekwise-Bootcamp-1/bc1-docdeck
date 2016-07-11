@@ -2893,7 +2893,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #ede578;
+  color: #a3ca7d;
 }
 
 ul {
@@ -2992,7 +2992,7 @@ blockquote::before {
   right: 0;
   transform: translate3d(50%, -50%, 0);
   color: #1a1a1a;
-  background-color: #ede578;
+  background-color: #a3ca7d;
 }
 
 figure img {
@@ -3047,7 +3047,7 @@ figcaption {
   cursor: pointer;
 }
 .slick-dots .slick-active {
-  color: #ede578;
+  color: #a3ca7d;
 }
 
 .tryit {
