@@ -162,6 +162,15 @@ aside {
         }
     }
 }
+.block, .list-item {
+    display: block;
+}
+.inline {
+    display: inline-block;
+}
+.block, .list-item, .inline {
+    background-color: transparentize($comp, .85);
+}
 a {
     text-decoration: underline;
     &:hover {
@@ -187,6 +196,7 @@ h4 {
     color: $comp;
     margin-bottom: 0;
     margin-top: 100px;
+    padding: 5px 0;
 }
 hr {
     margin: 50px 0;
@@ -228,6 +238,7 @@ code pre {
     padding: 5px 10px;
     border: 1px solid $pitch;
     box-shadow: 0 0 5px $shadow inset;
+    white-space: pre-wrap;
 }
 code.inline {
     margin: 0;

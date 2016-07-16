@@ -2889,6 +2889,18 @@ aside div:last-of-type div {
       flex-direction: row;
 }
 
+.block, .list-item {
+  display: block;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.block, .list-item, .inline {
+  background-color: rgba(128, 158, 219, 0.15);
+}
+
 a {
   text-decoration: underline;
 }
@@ -2919,6 +2931,7 @@ h4 {
   color: #809edb;
   margin-bottom: 0;
   margin-top: 100px;
+  padding: 5px 0;
 }
 
 hr {
@@ -2961,6 +2974,7 @@ code pre {
   padding: 5px 10px;
   border: 1px solid black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+  white-space: pre-wrap;
 }
 
 code.inline {
