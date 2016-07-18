@@ -46,9 +46,7 @@ gulp.task('js', function(){
 
 gulp.task('serve', ['compass'], function(){
 	browserSync.init({
-		server: {
-			baseDir: "./"
-	    },
+		server: './',
 		notify: false
 	});
 });

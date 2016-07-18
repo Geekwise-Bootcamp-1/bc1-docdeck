@@ -1,12 +1,10 @@
 <header>
-    <h1><a href="/index.php"><img src="/img/docdeck.svg" alt=""> Doc<span>Deck</span></a> <small>&mdash; Bootcamp 1 | <?php echo ucfirst($thisDay[0]); ?></small></h1>
-    <div>
-        <h5>Instructor:</h5>
-        <ul>
-            <li>Matthew Higley</li>
-        </ul>
-    </div>
+    <img src="/img/docdeck.svg" alt="">
+    <h1>Doc<span>Deck</span></h1>
+    <p>&ndash;&nbsp; Bootcamp 1 | Lesson <?php echo $thisLesson; ?></p>
+    <h3>Instructor:</h3>
+    <p>Matthew Higley</p>
 </header>
-<?php include 'navigation.php'; ?>
-<main>
+<?php include 'nav.php'; ?>
+<main role="main">
     <div class="sections">

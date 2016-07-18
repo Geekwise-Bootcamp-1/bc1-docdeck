@@ -1,6 +1,7 @@
 {
-  "name": "js1-docdeck",
+  "name": "gulptemplate",
   "version": "1.0.0",
+  "description": "All files except package.json included in template. Follow all instructions for new projects:",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,13 +16,5 @@
     "gulp-compass": "^2.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-util": "^3.0.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Geekwise-Javascript-1/js1-docdeck.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Geekwise-Javascript-1/js1-docdeck/issues"
-  },
-  "homepage": "https://github.com/Geekwise-Javascript-1/js1-docdeck#readme"
+  }
 }

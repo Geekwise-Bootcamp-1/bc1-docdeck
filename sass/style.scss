@@ -1,361 +1,329 @@
 @import "variables";
 @import "reset";
+@import "fontawesome";
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
 @import 'https://fonts.googleapis.com/css?family=Cutive+Mono';
-@import "fontawesome";
+
 /* sass goes here */
-button:focus,
-section {
-    outline: none;
+
+button:focus, section {outline: none;}
+
+a {
+    color: $key;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
-$docdeck: hsla(199, 20%, 60%, 1);
-$red: hsla(345, 49%, 61%, 1);
-$ong: hsla(28, 62%, 61%, 1);
-$yel: hsla(56, 76%, 70%, 1);
-$key: hsla(90, 42%, 64%, 1);
-$comp: hsla(220, 56%, 68%, 1);
-$ppl: hsla(285, 51%, 62%, 1);
-//$comp: desaturate(complement($key), 50%);
-$shadow: hsla(0, 0%, 0%, .5);
-$pitch: hsla(0, 0%, 0%, 1);
-$black: hsla(0, 0%, 9%, 1);
-$blacklite: hsla(0, 0%, 29%, 1);
-$white: hsla(0, 0%, 96%, 1);
-$whitedim: hsla(0, 0%, 96%, .5);
-$reddim: transparentize($red, .75);
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'open sans', sans-serif;
+    font-weight: 600;
+}
+h4 {
+    font-weight: 400;
+    color: $dd;
+    margin-top: $spacer;
+}
+hr {
+    margin: 4em 0;
+    border: 1px solid $whitedim;
+}
+p {
+    margin-bottom: 2em;
+}
+iframe {
+    @include whitespace(4em);
+    border: 1px solid #5a5a5a !important;
+}
 
-$header: 75px;
-$footer: 30px;
-
-header, main, aside, footer {
+/*
+ * Course icon styles
+*/
+.course {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 2px 5px;
+    background-color: $key;
+    width: 50px;
+    height: 50px;
+    color: $pitchblack;
+    font-weight: 600;
+    letter-spacing: -1px;
     box-sizing: border-box;
+    h1 {
+        font-size: 1.2rem;
+    }
 }
-body,
-html {
+
+/*
+ * Figure / Figcaption styles
+*/
+.figure {
+    @include whitespace(4em);
+    display: inline-block;
+    padding: 10px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAOUlEQVQYV2NkQAJZWVn/p02bxogsBudgkwQpBCvAJQlWgE8SbgKynehuQnEQNgdjVYBsLYYCdDcBAKGJHkaYb4KqAAAAAElFTkSuQmCC');
+    figure {
+        display: table;
+        margin: 0;
+        padding: 0 0 10px;
+    }
+    img {
+        display: block;
+        width: 100%;
+        border: 1px solid $blacklite;
+        box-sizing: border-box;
+    }
+    figcaption {
+        box-sizing: border-box;
+        display: table-caption;
+        caption-side: bottom;
+        background-color: $blacklite;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+/*
+ * Ordered / Unordered List styles
+*/
+ul, ol {
+    padding: 0;
+    margin: ($spacer / 2) 0;
+    ul, ol {
+        padding-left: 40px;
+        margin: 0;
+    }
+    li {margin-bottom: 10px;}
+}
+ul {list-style-position: inside;}
+ol, aside ul {
+    counter-reset: numbering;
+    li {display: block;}
+    li:before {
+        content: counters(numbering, '.') '. ';
+        counter-increment: numbering;
+    }
+}
+
+/*
+ * Blockquote styles
+*/
+blockquote {
+    @include whitespace(0);
+    padding: 40px 20px;
+    background-color: $blacklite;
+    box-shadow: border-box;
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $key;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        content: "\f0eb";
+        display: block;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        line-height: 50px;
+        width: 50px;
+        height: 50px;
+        font-size: 2em;
+        background-color: $key;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        color: $black;
+    }
+    p:last-of-type,
+    code.block:last-of-type {margin-bottom: 0;}
+}
+
+/*
+ * Codeblock styles
+*/
+code {
+    font-family: 'Cutive Mono', mono;
+    letter-spacing: 0;
+    background-color: $black;
+    border: 1px solid $pitchblack;
+    padding: 10px;
+    &.block {
+        display: block;
+        @include whitespace(0);
+    }
+    &.inline {
+        display: inline-block;
+        padding: 0 5px;
+    }
+    pre {margin: 0;font-family: inherit;white-space: pre-wrap;}
+}
+
+/*
+ * TryIt styles
+*/
+.tryit {
+    @include whitespace(0);
+    padding: 20px;
+    background-color: $comp;
+    border: 1px solid lighten($comp, 5%);
+    box-shadow: border-box;
+}
+
+#asideToggle {
+    top: 20px;
+}
+.btn {
+    position: absolute;
+    z-index: 100;
+    width: 35px;
+    height: 35px;
+    border: 1px solid $deepblack;
+    background-color: $black;
+    color: $white;
+}
+
+.asideToggle {
+    display: none;
+}
+
+html, body {
     height: 100%;
 }
 body {
-    font-size: 18px;
-    font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
-    color: $white;
     margin: 0;
-    background-color: $black;
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+    font-family: 'open sans', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    overflow: hidden;
+    color: $white;
     position: relative;
 }
-header,
-footer {
+header, footer {
     display: flex;
     align-items: center;
-    flex: none;
     padding: 0 20px;
 }
 header {
     height: $header;
-    background-color: #101010;
-    display: flex;
-    justify-content: space-between;
-    h1,
-    h5,
-    ul {
-        margin: 0;
-    }
-    li {
-        line-height: 1.15;
-    }
-    h1 {
-        display: flex;
-        align-items: center;
-    }
-    h1 a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        &:hover {
-            color: $white;
-        }
-    }
-    h1 span {
-        color: $docdeck;
-    }
-    h1 small {
-        margin-left: 5px;
-        font-weight: 100;
-    }
-    h5 {
-        margin-right: 20px;
-    }
+    background-color: $black;
+    color: $white;
+    * {margin: 0 5px 0 0;}
+    span {color: $dd;}
     img {
-        width: 40px;
+        width: 30px;
         height: auto;
-        margin-right: 5px;
     }
-    div {
+    h1 {font-size: 1.25em;}
+    h3 {
+        font-size: 1.05em;
+        margin-left: auto;
+        font-weight: 400;
+    }
+    p {margin: 1em 0;}
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: $main;
+    margin-top: $header;
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    background-color: lighten(#2a2a2a, 2%);
+    padding: 50px 20px 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 0 10px -5px $pitchblack;
+    ul {list-style: none;margin: 20px 0 0;}
+    li {cursor: pointer;margin: 0;}
+    li:hover {color: $whitedim;}
+    li.slick-active {color: $key;}
+    hr {margin: 10px 0 0;}
+    > div:last-of-type {
+        margin-top: auto;
         display: flex;
-        align-items: baseline;
+        flex-direction: column;
+        .course {margin-left: auto;}
+        div:last-of-type {
+            display: flex;
+            justify-content: space-between;
+            a {color: $white; cursor: pointer;}
+            a:hover {color: $key;}
+            a.disabled {color: $whitedim;cursor: default;text-decoration: none;}
+        }
     }
 }
 main {
-    height: 100%;
-    display: flex;
-    flex: 1;
-    width: 100%;
     background-color: #2a2a2a;
-    position: relative;
-    overflow: hidden;
-    &::after,
-    &::before {
-        content: "";
-        display: block;
-        clear: both;
+    height: $main;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    article {
+        padding: 50px 50px 150px;
     }
-}
-aside {
-    width: 300px;
-    margin: $header 0 $footer;
-    height: calc(100% - (#{$header} + #{$footer}));
-    position: fixed;
-    z-index: 5;
-    left: 0;
-    top: 0;
-    padding: 50px 20px 20px;
-    box-shadow: 10px 0 10px -8px $pitch;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    ul {
-        list-style-type: decimal;
-        list-style-position: outside;
-        margin-left: 19px;
-        margin-top: 10px;
-        li:hover {
-            color: $whitedim;
-        }
-    }
-    a {
-        text-decoration: none;
-    }
-    a.disabled {
-        color: $whitedim;
-        cursor: default;
-    }
-    div:last-of-type {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        img {
-            align-self: flex-end;
-        }
-        hr {
-            width: 100%;
-            border: none;
-            height: 1px;
-            background-color: $whitedim;
-            margin: 16px 0 8px;
-        }
-        div {
-            flex-direction: row;
-        }
-    }
-}
-.block, .list-item {
-    display: block;
-}
-.inline {
-    display: inline-block;
-}
-.block, .list-item, .inline {
-    background-color: transparentize($comp, .85);
-}
-a {
-    text-decoration: underline;
-    &:hover {
-        color: $key;
-    }
-}
-ul {
-    margin-bottom: 20px;
-}
-li {
-    margin-bottom: 5px;
-    line-height: 1.5;
-}
-h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-h2 {
-    font-weight: 400;
-}
-h4 {
-    font-weight: 400;
-    color: $comp;
-    margin-bottom: 0;
-    margin-top: 100px;
-    padding: 5px 0;
-}
-hr {
-    margin: 50px 0;
-}
-ol {
-    list-style-type: decimal;
-    list-style-position: outside;
-    margin-left: 19px;
-}
-ol,
-ul {
-    & > li:first-child h4 {
-        //margin-top: 0;
-    }
-    ul {
-        list-style-type: disc;
-        list-style-position: outside;
-        margin-left: 19px;
-        margin-top: 10px;
-    }
-    ol {
-        list-style-type: decimal;
-        list-style-position: outside;
-        margin-left: 19px;
-        margin-top: 10px;
-    }
-}
-code {
-    display: block;
-}
-code.inline,
-code pre {
-    font-family: 'Cutive Mono', monospace;
-    display: inline-block;
-    background-color: $black;
-    border-radius: 5px;
-    font-size: 1.25rem;
-    margin: 10px 0 10px 20px;
-    padding: 5px 10px;
-    border: 1px solid $pitch;
-    box-shadow: 0 0 5px $shadow inset;
-    white-space: pre-wrap;
-}
-code.inline {
-    margin: 0;
-}
-blockquote {
-    background-color: $blacklite;
-    border: 1px solid #101010;
-    box-shadow: 0 0 5px $shadow inset;
-    padding: 20px;
-    margin-top: 50px;
-    position: relative;
-    &::before {
-        font: {
-            family: "FontAwesome";
-            style: normal;
-            weight: normal;
-            size: 2rem;
-        }
-        content: "\f0eb";
-        display: block;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        border-radius: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate3d(50%, -50%, 0);
-        color: #1a1a1a;
-        background-color: $key;
-
-    }
-}
-figure {
-    img {
-        max-width: 100%;
-    }
-}
-figcaption {
-    color: $whitedim;
-}
-.sections {
-    margin-left: 250px;
-    padding: 50px 100px;
-    float: right;
-    overflow: auto;
-}
-.sections section article {
-    box-sizing: border-box;
-    padding: 0 20px 150px;
-}
-.slick-slider {
-    position: static;
-}
-.slick-slider button {
-    border: none;
-    background-color: $pitch;
-    color: $white;
-    position: absolute;
-    top: 50%;
-    padding: 20px 10px;
-    font-size: 2rem;
-    cursor: pointer;
-    transform: translate3d(0, -100%, 0);
-    &:first-of-type {
-        left: 300px;
-        border-radius: 0 50% 50% 0;
-        padding-left: 5px;
-        padding-right: 10px;
-    }
-    &:last-of-type {
-        right: 0;
-        border-radius: 50% 0 0 50%;
-        padding-left: 10px;
-        padding-right: 5px;
-    }
-}
-.slick-dots {
-    cursor: pointer;
-    & .slick-active {
-        color: $key;
-    }
-}
-.tryit {
-    background-color: $reddim;
-    color: $white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
 }
 footer {
+    font-size: .65em;
     height: $footer;
-    background-color: #1a1a1a;
-    font-size: 0.65rem;
-    color: $whitedim;
-    i {
-        margin: 0 3px;
-        color: $red;
-    }
+    background-color: $deepblack;
+    color: transparentize($white, .35);
+    p {margin: 0;}
+    span {color: $dd;}
+    i.fa {color: $red;}
 }
-table {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid $whitedim;
-    tr {
-        flex: 1;
-        display: flex;
+.sections {
+    position: static;
+    .btn {top: 50%;}
+    button:last-of-type {transition: transform 250ms ease-out; right: 0;}
+
+    button.slick-disabled:first-of-type {transform: translate3d(-100%, 0, 0)}
+    button.slick-disabled:last-of-type {transform: translate3d(100%, 0, 0)}
+}
+
+/*
+ * Panel animation styles
+*/
+body {
+    aside {@include anim(left);left: -$panel;}
+    #asideToggle {@include anim(right);right: -35px;}
+    main {@include anim(padding-left);padding-left: 0px;}
+    .sections button:first-of-type {transition: transform 250ms ease-out, left 150ms ease-out; left: 0;}
+}
+body.padify {
+    aside {left: 0px;}
+    #asideToggle {right: 0px;}
+    main {padding-left: $panel;}
+    .sections button:first-of-type {left: $panel;}
+}
+
+
+@media screen and (max-width: 768px){
+    header {
+        p:last-of-type, h3 {display: none;}
     }
-    th {
-        flex: 1;
-        background-color: transparentize($whitedim, .25);
-        border: none;
-        border-bottom: 1px solid $whitedim;
+    body, body.padify {
+        aside {display: none; left: 0px;}
+        #asideToggle {display: none; right: 0px;}
+        main {height: calc(100% - #{$header}); padding-left: 0px;}
+        .sections button:first-of-type {left: 0;}
     }
-    td {
-        flex: 1;
-        border: none;
-    }
+    footer {display: none;}
 }
